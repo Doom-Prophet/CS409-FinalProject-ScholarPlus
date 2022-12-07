@@ -8,8 +8,8 @@ var PaperSchema = new mongoose.Schema({
     authors: {type: [{type: String}], default:[]},
     citations: {type: Number, required:true},
     abstract: {type: String, required:true},
-    venue: {type: String, required:true},
-    posts_who_mentioned: {type: [{type: String}], default:[]}
+    venue: {type: String, required:true}
+    // posts_who_mentioned: {type: [{type: String}], default:[]}
 });
 
 // Export the Mongoose model

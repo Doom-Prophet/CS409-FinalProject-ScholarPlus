@@ -6,10 +6,7 @@ module.exports = function (router) {
 
     homeRoute.get(function (req, res) {
         var connectionString = secrets.token;
-        // res.json({ message: 'My connection string is not ' + connectionString });
-        
-        const name = req.query.user;
-        res.send(name+"!");
+        res.json({ message: 'My connection string is ' + connectionString });
     });
 
     return router;
