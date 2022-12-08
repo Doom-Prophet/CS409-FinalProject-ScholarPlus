@@ -4,11 +4,8 @@
 const paper_controller = require("../controllers/PaperController");
 
 module.exports = function(router){
-    // GET request for creating a paper. NOTE This must come before routes that display paper (uses id).
-    router.get("/paper/create", paper_controller.paper_create_get);
-
     // POST request for creating paper.
-    router.post("/paper/create", paper_controller.paper_create_post);
+    router.post("/paper/create", paper_controller.paper_create);
 
     // GET request to delete paper.
     router.get("/paper/:id/delete", paper_controller.paper_delete_get);
@@ -17,10 +14,10 @@ module.exports = function(router){
     router.post("/paper/:id/delete", paper_controller.paper_delete_post);
 
     // GET request to update paper.
-    router.get("/paper/:id/update", paper_controller.paper_update_get);
+    // router.get("/paper/:id/update", paper_controller.paper_update_get);
 
     // POST request to update paper.
-    router.post("/paper/:id/update", paper_controller.paper_update_post);
+    // router.post("/paper/:id/update", paper_controller.paper_update_post);
 
     // GET request for one paper.
     router.get("/paper/:id", paper_controller.paper_detail);
