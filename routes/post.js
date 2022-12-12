@@ -7,17 +7,11 @@ module.exports = function(router){
     // POST request for creating post.
     router.post("/post/create", post_controller.post_create);
 
-    // GET request to delete post.
-    router.get("/post/:id/delete", post_controller.post_delete_get);
+    // DELETE request to delete post.
+    router.delete("/post/:id", post_controller.post_delete);
 
-    // POST request to delete post.
-    router.post("/post/:id/delete", post_controller.post_delete_post);
-
-    // GET request to update post.
-    // router.get("/post/:id/update", post_controller.post_update_get);
-
-    // POST request to update post.
-    // router.post("/post/:id/update", post_controller.post_update_post);
+    // PUT request to update post.
+    router.put("/posts", post_controller.post_update);
 
     // GET request for one post.
     router.get("/post/:id", post_controller.post_detail);
